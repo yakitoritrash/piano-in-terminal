@@ -23,8 +23,9 @@ def pick_choice(options):
                     current_index += 1;
                 else:
                     current_index -= 1;
-            elif key == "\n":
+            elif key == "\n" or key == "\r":
                 return options[current_index]
+
             sys.stdout.write(f"\033[{len(options)}A")
     finally:
         termios.tcsetattr(sys.stdin, termios.TCSADRAIN, old_settings)
