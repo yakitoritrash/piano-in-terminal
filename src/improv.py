@@ -23,7 +23,6 @@ def improv():
         while (True):
             key = sys.stdin.read(1)
             if key in key_map:
-                print(key)
                 key_map[key].play()
             elif key == "q":
                 break;
